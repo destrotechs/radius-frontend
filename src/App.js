@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React, {useEffect,useState} from 'react';
 import './App.css';
+import Chat from './components/chats';
+import Contacts from './components/contacts';
 
 function App() {
+
+  const [messages,setMessages] = useState([])
+
+  useEffect(()=>{
+     fetch('/messages').then(res => res.json()).then(data =>{
+         if(data!=null){
+             setMessages(data);
+         }else{
+             console.log("Warning!! No messages available");
+         }
+     })
+  },[])
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='row'>
+        <div className='col-md-3'>
+        <Contacts/>
+        </div>
+        <div className='col-md-9'>
+          <Chat messages={messages}/>
+        </div>
+      </div>
     </div>
   );
 }
