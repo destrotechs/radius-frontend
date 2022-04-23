@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './css/tinymce/tinymce.min.js';
-import './css/quill/quill.min.js';
+// import './css/tinymce/tinymce.min.js';
+// import './css/quill/quill.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
