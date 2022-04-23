@@ -1,31 +1,35 @@
 export const menuitems = [
         {
             title:"Packages",
-            icon:"fa fa-clock",
+            icon:"bi bi-archive-fill",
+            component:"Package",
             children:[
                 {
                     title:"All Packages",
                     path:"/packages",
-                    icon:"icon",
+                    icon:"bi bi-circle",
                 },
             ]
         },
         {
             title:"Users",
             path:"/path",
-            icon:"fa fa-clock",
+            component:"",
+            icon:"bi bi-arrow-down-up",
             children:[
                 {
                     title:"New Users",
                     path:"/path",
-                    icon:"icon",
+                    icon:"bi bi-circle",
+                    component:"",
                 },
             ]
         },
         {
             title:"Tempo",
-            path:"/tempo",
-            icon:"fa fa-clock",
+            path:"/packages",
+            icon:"bi bi-menu-button-wide",
+            component:"Package",
             children:[
                 
             ]
