@@ -11,7 +11,7 @@ import './css/style.css';
 import Sidebar from './components/sidebar';
 import Home from './components/home';
 import Package from './components/packages';
-import { Outlet, Link,BrowserRouter,Routes,Route } from "react-router-dom";
+import {BrowserRouter,Routes,Route } from "react-router-dom";
 import { menuitems } from './components/menuitems';
 
 
