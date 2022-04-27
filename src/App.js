@@ -11,6 +11,7 @@ import './css/style.css';
 import Sidebar from './components/sidebar';
 import Home from './components/home';
 import Package from './components/packages';
+import Payments from './components/payments';
 import {BrowserRouter,Routes,Route } from "react-router-dom";
 import { menuitems } from './components/menuitems';
 
@@ -35,6 +36,8 @@ function App() {
               
               <Route path="/" element={<Home/>} />
               <Route path="/packages" element={<Package/>} />
+              <Route path="/payments" element={<Payments/>} />
+
               
             </Routes>
           </BrowserRouter>           

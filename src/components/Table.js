@@ -4,7 +4,7 @@ import DataTable from 'react-data-table-component';
 
 function TableData(props){   
 
-    let {data} = props
+    let {data,page_title} = props
     let t_headers = Object.keys(data[0])
 
     let cols = []
@@ -29,7 +29,9 @@ function TableData(props){
     };
 
     return (
-       <>
+    <div className="card">
+        <div className="card-body">
+        <h5 className="card-title">{page_title}</h5>
        <table className="table table-bordered table-sm table-striped">
            <thead>
                <tr>
@@ -63,7 +65,8 @@ function TableData(props){
                })}
            </tbody>
        </table>
-       </>
+       </div>
+    </div>
         
     )
 

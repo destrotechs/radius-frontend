@@ -57,7 +57,7 @@ export const menuitems = [
             children:[
                 {
                     title:"All Payments",
-                    path:"/payments/all",
+                    path:"/payments",
                     icon:"bi bi-money-bill",
                     component:"",
                 },
