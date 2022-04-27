@@ -7,12 +7,9 @@ function Payments(props){
         fetch("/payments/all").then(res=>{
             if (res.ok){
                 return res.json();
-            }else{
-                console.log("RESPONSE=======================",res);
             }
             
         }).then(data=>{
-            console.log("==============DATA=================",data);
             if (data.length>0){
                 setPayments(data);
             }
