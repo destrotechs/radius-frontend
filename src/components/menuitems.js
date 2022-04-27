@@ -3,6 +3,7 @@ export const menuitems = [
             title:"Packages",
             icon:"bi bi-archive-fill",
             component:"Package",
+            path:"/packages",
             children:[
                 {
                     title:"All Packages",
@@ -13,13 +14,12 @@ export const menuitems = [
         },
         {
             title:"Users",
-            path:"/path",
             component:"",
             icon:"bi bi-arrow-down-up",
             children:[
                 {
                     title:"New Users",
-                    path:"/path",
+                    path:"/users",
                     icon:"bi bi-circle",
                     component:"",
                 },

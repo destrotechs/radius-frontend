@@ -15,10 +15,16 @@ import {BrowserRouter,Routes,Route } from "react-router-dom";
 import { menuitems } from './components/menuitems';
 
 
+
 function App() {
+
+  function getComponent(str){
+    var MyComponent = str
+    return <MyComponent/>
+  }
   return (
     <div className="App">
-      <div className='row'>
+      <div className='container-fluid row'>
         <div className='col-md-2'>
         <Sidebar/>
         </div>
@@ -26,21 +32,10 @@ function App() {
           <div className='wrapper mt-5 main m-2'>
           <BrowserRouter>
             <Routes>
-              {menuitems.map((menuitem,index)=>{
-                return (
-                  menuitem.component===null?'':<Route path={menuitem.path} element={menuitem.component}/>
-                );
-              })}
               
-              {menuitems.map((menuitem,index)=>{
-                return (
-                  menuitem.children.length===0?'':menuitem.children.map((child,index)=>{
-                    return (
-                    child.path===null?'':<Route path={child.path} element={child.component}/>
-                    );
-                  })
-                );
-              })}              
+              <Route path="/" element={<Home/>} />
+              <Route path="/packages" element={<Package/>} />
+              
             </Routes>
           </BrowserRouter>           
           
