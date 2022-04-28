@@ -14,7 +14,8 @@ import Package from './components/packages';
 import Payments from './components/payments';
 import {BrowserRouter,Routes,Route } from "react-router-dom";
 import { menuitems } from './components/menuitems';
-
+import Newpackage from './components/new_packages';
+import Newuser from './components/new_user';
 
 
 function App() {
@@ -30,13 +31,16 @@ function App() {
         <Sidebar/>
         </div>
         <div className='col-md-10 ml-3 mt-5'>
-          <div className='wrapper mt-5 main m-2'>
+          <div className='wrapper mt-5 main m-2 text-start card p-5'>
           <BrowserRouter>
             <Routes>
               
               <Route path="/" element={<Home/>} />
               <Route path="/packages" element={<Package/>} />
               <Route path="/payments" element={<Payments/>} />
+              <Route path="/packages/new" element={<Newpackage/>} />
+              <Route path="/users/new" element={<Newuser/>} />
+
 
               
             </Routes>
